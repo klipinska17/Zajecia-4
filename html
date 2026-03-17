@@ -1,0 +1,57 @@
+ |...................................                 |  67% [unnamed-chunk-1]
+
+processing file: przemówienieTrump.spin.Rmd
+
+
+Error in `combine_vars()`:
+! Faceting variables must have at least one value.
+Backtrace:
+     ▆
+  1. └─rmarkdown::render(...)
+  2.   └─knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  3.     └─knitr:::process_file(text, output)
+  4.       ├─xfun:::handle_error(...)
+  5.       ├─base::withCallingHandlers(...)
+  6.       └─knitr:::process_group(group)
+  7.         └─knitr:::call_block(x)
+  8.           └─knitr:::block_exec(params)
+  9.             └─knitr:::eng_r(options)
+ 10.               ├─knitr:::in_input_dir(...)
+ 11.               │ └─knitr:::in_dir(input_dir(), expr)
+ 12.               └─knitr (local) evaluate(...)
+ 13.                 └─evaluate::evaluate(...)
+ 14.                   ├─base::withRestarts(...)
+ 15.                   │ └─base (local) withRestartList(expr, restarts)
+ 16.                   │   ├─base (local) withOneRestart(withRestartList(expr, restarts[-nr]), restarts[[nr]])
+ 17.                   │   │ └─base (local) doWithOneRestart(return(expr), restart)
+ 18.                   │   └─base (local) withRestartList(expr, restarts[-nr])
+ 19.                   │     └─base (local) withOneRestart(expr, restarts[[1L]])
+ 20.                   │       └─base (local) doWithOneRestart(return(expr), restart)
+ 21.                   ├─evaluate:::with_handlers(...)
+ 22.                   │ ├─base::eval(call)
+ 23.                   │ │ └─base::eval(call)
+ 24.                   │ └─base::withCallingHandlers(...)
+ 25.                   └─watcher$print_value(ev$value, ev$visible, envir)
+ 26.                     ├─base::withVisible(handle_value(handler, value, visible, envir))
+ 27.                     └─evaluate:::handle_value(handler, value, visible, envir)
+ 28.                       └─handler$value(value, visible)
+ 29.                         └─knitr (local) fun(x, options = options)
+ 30.                           ├─base::withVisible(knit_print(x, ...))
+ 31.                           ├─knitr::knit_print(x, ...)
+ 32.                           └─knitr:::knit_print.default(x, ...)
+ 33.                             └─knitr::normal_print(x)
+ 34.                               ├─base::print(x)
+ 35.                               └─ggplot2 (local) `print.ggplot2::ggplot`(x)
+ 36.                                 ├─ggplot2::ggplot_build(x)
+ 37.                                 └─ggplot2 (local) `ggplot_build.ggplot2::ggplot`(x)
+ 38.                                   └─layout$setup(data, plot@data, plot@plot_env)
+ 39.                                     └─ggplot2 (local) setup(..., self = self)
+ 40.                                       └─self$facet$compute_layout(data, self$facet_params)
+ 41.                                         └─ggplot2 (local) compute_layout(..., self = self)
+ 42.                                           └─ggplot2::combine_vars(data, params$plot_env, vars, drop = params$drop)
+ 43.                                             └─cli::cli_abort("Faceting variables must have at least one value.")
+ 44.                                               └─rlang::abort(...)
+                                                                                                            
+
+Quitting from przemówienieTrump.spin.Rmd:2-263 [unnamed-chunk-1]
+Wykonywanie wstrzymane
